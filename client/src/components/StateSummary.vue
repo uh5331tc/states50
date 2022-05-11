@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div> 
         <p>There are a total of {{ states.length }} states and the District of Columbia</p>
         <p>You have visited {{ totalVisited }} states! </p>
 
@@ -9,12 +9,12 @@
 
 <script>
 export default {
-    name: 'StateSummary',
+    name: 'StateSummary', //exporting state summary
     props: {
         states: Array,  //added a COMMA exapmle code had one
     },
     computed: {
-        totalVisited() {
+        totalVisited() { //getting the count for states visited
             let visitedCount = 0
         this.states.forEach( state => {
             if (state.visited) {
@@ -23,14 +23,14 @@ export default {
         })
         return visitedCount
     },
-    units() {
+    units() { // displaying correct wording
         if (this.totalVisited === 1 ) {
             return 'state'
         } else {
             return 'states'
         }
     },
-    areAllVisited() {
+    areAllVisited() { //checkign to see if all states were visited
         return this.totalVisited === this.states.length
     }
 }
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style>
-#all-visited-message {
+.all-visited-message {
     color:blueviolet;
     font-weight: 600;
 }

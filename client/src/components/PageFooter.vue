@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    name: 'PageFooter',
+    name: 'PageFooter', //naming page footer
 }
 </script>
 

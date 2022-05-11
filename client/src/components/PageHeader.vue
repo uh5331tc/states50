@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'PageHeader', 
+    name: 'PageHeader',  // naming page header
 }
 </script>
 

@@ -1,11 +1,11 @@
 <template>
 <div>
-    <div>
+    <div> <!--States-->
     <state-summary v-bind:states="states">
     </state-summary>
     </div>
 
-    <div class="state-list-container">
+    <div class="state-list-container"> <!--State Container-->
      <div class="state-container" v-for="state in states" v-bind:key="state.name">
          <state-detail
           v-bind:state="state"
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+//imprting from components
 import StateDetail from './StateDetail.vue'
 import StateSummary from './StateSummary.vue'
 
@@ -28,14 +29,14 @@ export default {
     name: 'StateList',
     data() {
         return {
-            states: []
+            states: [] //returns the array of states
         }
     },
     mounted() {
         this.fetchAllStates()
     },
     methods: {
-        fetchAllStates() {
+        fetchAllStates() { //getting all states
             this.$stateService.getAllStates().then(states => {
                 this.states = states
             })
@@ -44,7 +45,7 @@ export default {
                 console.error(err)
             })
         },
-        updateVisited(stateName, visited) {
+        updateVisited(stateName, visited) { // updating visited methode
             this.$stateService.setVisited(stateName, visited).then(response => {
                 this.fetchAllStates() 
             })

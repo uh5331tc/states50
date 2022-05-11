@@ -1,8 +1,8 @@
 <template>
-    <div class="state-info">
+    <div class="state-info"> <!-- Getting the states information -->
         <span class="state-name">{{ state.name }}</span>
 
-        <div>
+        <div><!--check box making-->
             <input class="visit-state" type="checkbox" v-model="visited" v-on:change="updateVisited"> <!-- OR "visitedChanged???" -->
         </div>
 

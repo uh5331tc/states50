@@ -5,11 +5,11 @@
     <p v-if="state.visited">You have visited this state</p>
     <p v-else>You have not visisted the state yet</p>
 
-    <!-- TO DOO MAP HERE -->
+    <!-- TO DOO MAP HERE getting map from a webpage -->
     <div id="map-container" v-if="dataReady">
         <l-map ref="map" v-on:ready="onMapReady" v-bind:center="mapCenter" v-bind:zoom="state.zoom">
             <l-tile-layer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
                 attribution="&copy; OpenStreetMap contributors">
             </l-tile-layer>
         </l-map>
@@ -23,7 +23,7 @@ import {LMap, LTileLayer } from '@vue-leaflet/vue-leaflet'  // LMap was wrong, c
 
 export default {
     name: 'StateMap',
-    comoponents: {
+    components: {
         LMap, LTileLayer
     },
     data() {
