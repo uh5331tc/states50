@@ -42,11 +42,14 @@ export default {
             this.$stateService.getOneState(this.state.name).then( state => {
                 this.state = state
                 this.dataReady = true
+                this.setMapView()
             }).catch( err => {
                 // 404 not found and
                 if ( err.response && err.response.status === 404 ) {
                     this.state.name = '?, please enter the state again'  // write this another way
-                } else {
+                //programatically navigate to the not found page
+                this.$router.push({ name: 'NotFound'})
+               } else {
                     alert('Sorry, error fetching data about this state') //general message for user
                     console.error(err) // message for the developer
                 }

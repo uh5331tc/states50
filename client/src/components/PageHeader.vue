@@ -14,6 +14,7 @@ export default {
 
 #block-header {
     padding: 2rem 1 rem;
+    height: 15rem; /*border image height*/
     margin-bottom: 2 rem;
     border-radius: .3rem;
     background-color: rgba(82, 243, 221, 0);
@@ -23,8 +24,8 @@ export default {
 }
 
 #title {
-    font-weight: 800;
-    color:darkgreen;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+    font-weight: 900;
+    color:rgb(234, 250, 234);
+    font-family:'Times New Roman', Times, serif
+    }
 </style>

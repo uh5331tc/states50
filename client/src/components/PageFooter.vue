@@ -1,5 +1,10 @@
 <template>
+
     <div>
+        <br>
+        <br>
+        <br>
+
         <div class="navigation-links">
             <span class="nav-link">
             <router-link to="/">HOME</router-link>
@@ -13,7 +18,7 @@
             </p>
 
             <p><a target="_blank" href="https://icons8.com/icon/116828/map-grid">Map Icon</a>
-            Map Icon by Icons 8<a target="_blank" href="">Icons8</a>
+            Map Icon by Icons 8 <a target="_blank" href=""> Icons 8</a>
             </p>
         </div>
         </div>
