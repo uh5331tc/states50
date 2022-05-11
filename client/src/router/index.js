@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import StateList from '@/components/StateList'
 import AboutSite from '@/components/AboutSite'
+import StateMap from '@/components/StateMap'
 
 export default createRouter ({
     history: createWebHashHistory(),
@@ -13,7 +14,12 @@ export default createRouter ({
         {
             path: '/about',
             name: 'AboutSite',
-            component: StateList
+            component: AboutSite
+        },
+        {
+            path: '/map/:state',
+            name: 'StateMap',
+            component: StateMap
         }
     ]
 })

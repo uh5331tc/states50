@@ -9,7 +9,20 @@ router.get('/states', function(req, res, next) {
     })
     .catch( err => next(err) )
 })
-
+// get all the information about the state
+//state/California or state/Iowa
+router.get('/state/:name', function(req, res, name) {
+    let stateName = req.params.name
+    States.findOne( {where: { name: stateName }})
+    .then( state => {
+        if (state) {
+            return res.json(state)
+        } else {  // if name is NotAState
+            return res.status(404).send('State not found')
+        }
+    } )
+    .catch( err => next(err))
+})
 // patch route to update a state visitied or not
 // request to state/IOWA
 router.patch('/state/:name', function(req, res, next){

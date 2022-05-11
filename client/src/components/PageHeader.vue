@@ -17,7 +17,7 @@ export default {
     margin-bottom: 2 rem;
     border-radius: .3rem;
     background-color: rgba(82, 243, 221, 0);
-    background-image: url('~@/assets/photo-header.jpg');
+    background-image: url('~@/assets/photo-header.jpeg');
     background-position: center;
     background-size: cover;
 }
