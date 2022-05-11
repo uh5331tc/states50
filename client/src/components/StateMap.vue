@@ -7,7 +7,7 @@
 
     <!-- TO DOO MAP HERE -->
     <div id="map-container" v-if="dataReady">
-        <l-map ref="map" v-on:ready="onMapReady" v-bind:center="mapCenter" v-vind:zoom="state.zoom">
+        <l-map ref="map" v-on:ready="onMapReady" v-bind:center="mapCenter" v-bind:zoom="state.zoom">
             <l-tile-layer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution="&copy; OpenStreetMap contributors">
@@ -19,12 +19,12 @@
 
 <script>
 
-import {Lmap, LTileLayer } from '@vue-leaflet/vue-leaflet'  // LMap was wrong, changed to Lmap
+import {LMap, LTileLayer } from '@vue-leaflet/vue-leaflet'  // LMap was wrong, changed to Lmap
 
 export default {
     name: 'StateMap',
     comoponents: {
-        Lmap, LTileLayer
+        LMap, LTileLayer
     },
     data() {
         return {

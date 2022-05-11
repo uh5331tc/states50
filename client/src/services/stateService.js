@@ -9,7 +9,7 @@ export default {
     setVisited(stateName, visited) {
         // example URL api/states/Wisconsin
         let requestData = { visited: visited }
-        return axios.patch('/api/states/' + stateName, requestData).then( response => {
+        return axios.patch('/api/state/' + stateName, requestData).then( response => {
             return response.data  //returning the string 'ok' 
         })
 
